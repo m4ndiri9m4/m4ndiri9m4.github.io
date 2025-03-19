@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Admin Dashboard - Employee Tracker</title>
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Leaflet CSS for map view -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Admin Dashboard</h1>
+    </header>
+    <section id="employee-management">
+      <h2>Employee Management</h2>
+      <form id="employee-form">
+        <input type="text" id="id_no" 
+        placeholder="ID Number" required>
+        <input type="text" id="first_name" 
+        placeholder="First Name" required>
+        <input type="text" id="last_name" 
+        placeholder="Last Name" required>
+        <input type="text" id="department" 
+        placeholder="Department" required>
+        <input type="text" id="position" 
+        placeholder="Position" required>
+        <input type="email" id="email" 
+        placeholder="Email Address" required>
+        <input type="password" id="password" 
+        placeholder="Password" required>
+        <input type="date" id="birth_date" 
+        placeholder="Birth Date" required>
+        <input type="date" id="date_hired" 
+        placeholder="Date Hired" required>
+        <button type="submit">Create Employee</button>
+      </form>
+      <div id="employee-list"></div>
+    </section>
+    <section id="attendance-records">
+      <h2>Attendance Records</h2>
+      <div id="records"></div>
+    </section>
+    <section id="map">
+      <h2>Employee Locations</h2>
+      <div id="mapid" style="height: 400px;"></div>
+    </section>
+  </div>
+  <!-- Load Socket.IO client library -->
+  <script src="/socket.io/socket.io.js"></script>
+  <!-- Leaflet JS -->
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>

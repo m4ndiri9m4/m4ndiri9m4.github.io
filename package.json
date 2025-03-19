@@ -1,0 +1,15 @@
+{
+    "name": "employee-location-tracker",
+    "version": "1.0.0",
+    "main": "server/app.js",
+    "scripts": {
+        "start": "node server/app.js"
+    },
+    "dependencies": {
+        "body-parser": "^1.20.1",
+        "express": "^4.18.2",
+        "mongoose": "^8.12.1",
+        "socket.io": "^4.8.1",
+        "sqlite3": "^5.1.2"
+    }
+}
